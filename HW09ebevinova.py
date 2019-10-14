@@ -5,7 +5,6 @@ import os
 from collections import defaultdict
 
 
-
 class Student:
     "A class that stores all the information about students."
     pt_hdr = ['CWID', 'Name', 'Completed Courses']
