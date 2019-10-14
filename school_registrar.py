@@ -1,5 +1,5 @@
 from prettytable import PrettyTable
-from HW08ebevinova import read_file
+from file_reader import read_file
 import unittest
 import os
 from collections import defaultdict
@@ -108,7 +108,7 @@ class Repository:
             print (e)
 
 def main():
-    path = ('/Registrar-Database')
+    path = ('/Users/katya/Documents/GitHub/Registrar-Database')
     stevens = Repository(path)
    
 

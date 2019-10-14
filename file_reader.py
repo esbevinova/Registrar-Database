@@ -1,8 +1,3 @@
-"""SSW-810-A
-   Ekaterina(Katya) Bevinova
-   Homework 08: Part 1: Date Arithmetic, Part 2: Field separated file reader, Part 3: Scanning directories and files
-"""
-
 import datetime
 from prettytable import PrettyTable
 import os
@@ -44,6 +39,7 @@ def read_file(file_name, fields, sep=',', header=False):
     else:
         with fp:
             for num, line in enumerate(fp, 1):
+                line = line.strip('\n')
                 values = line.split(sep)
                 if len(values) == fields:
                     if header==True and num==1:
@@ -52,9 +48,6 @@ def read_file(file_name, fields, sep=',', header=False):
                 else:
                     raise ValueError(file_name + " has " + str(fields) + "fields on line " + str(num) + " but expected " + str(fields))
             
-            
-                    
-
 def summarize(path):
     """A function that returns a list of python files along with the summary of its contents: classes, functions, lines, characters in a table."""
 
@@ -92,13 +85,11 @@ def scan(path):
                 characters += len(line)
             return path, classes, functions, lines, characters
            
-
 def main():
     dates()
     print(list(read_file(r'C:\Users\Kat\Documents\VSC-Python\.vscode\810\.vscode\students.txt', 4, ',', True)))
     summarize(r'C:\Users\Kat\Documents\VSC-Python\.vscode\810\files for hw8')
     
  
-
 if __name__ == '__main__':
     main()
