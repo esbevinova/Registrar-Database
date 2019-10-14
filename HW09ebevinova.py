@@ -1,7 +1,3 @@
-"""SSW-810-A
-   Ekaterina (katya) Bevinova
-   HW09
-"""
 from prettytable import PrettyTable
 from HW08ebevinova import read_file
 import unittest
@@ -113,7 +109,7 @@ class Repository:
             print (e)
 
 def main():
-    path = (r'C:\Users\Kat\Documents\VSC-Python\810\Repository')
+    path = ('/Registrar-Database')
     stevens = Repository(path)
    
 
